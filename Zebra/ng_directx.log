@@ -1,0 +1,77 @@
+⚠️ Using threading async_mode (recommended for blocking desktop capture)
+============================================================
+Windows Server - EVENT-DRIVEN CAPTURE (Like AnyDesk) with Host Notifications
+============================================================
+⚙️ Scale=0.85, Quality=70
+🔍 Change detection: 50 checks/sec
+📊 Threshold: 0.4% pixels must change
+🔔 Hotkeys: r+4 = PAUSE (notify clients), r+5 = RESUME
+============================================================
+
+🔥 EVENT-DRIVEN CAPTURE RUNNING:
+   ✓ Hotkeys: r+4 = pause (notify), r+5 = resume
+   • Scale: 0.85, Quality: 70, Check interval: 0.02s, Threshold: 0.4%
+
+✅ Starting on port 5003...
+============================================================
+⚠️ 'keyboard' package not available. Install with: pip install keyboard
+Host notifications disabled until 'keyboard' is installed.
+ * Serving Flask app 'ng_directx'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.31.142:5003
+Press CTRL+C to quit
+127.0.0.1 - - [31/Oct/2025 19:27:36] "GET /?token=MyStrongToken123456 HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2025 19:27:38] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [31/Oct/2025 19:28:09] "GET /?token=MyStrongToken123456 HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2025 19:28:10] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [31/Oct/2025 19:29:03] "GET /?token=MyStrongToken123456 HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2025 19:29:04] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [31/Oct/2025 19:29:35] "GET /socket.io/?token=MyStrongToken123456&EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 329, in execute
+    write(b"")
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 254, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+Traceback (most recent call last):
+  File "/Users/rahulgautam/Desktop/Zebra/ng_directx.py", line 379, in handle_control
+    pyautogui.moveTo(x, y, _pause=False)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pyautogui/__init__.py", line 594, in wrapper
+    returnVal = wrappedFunction(*args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pyautogui/__init__.py", line 1288, in moveTo
+    _mouseMoveDrag("move", x, y, 0, 0, duration, tween)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pyautogui/__init__.py", line 1507, in _mouseMoveDrag
+    platformModule._moveTo(tweenX, tweenY)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pyautogui/_pyautogui_osx.py", line 447, in _moveTo
+    _sendMouseEvent(Quartz.kCGEventMouseMoved, x, y, 0)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pyautogui/_pyautogui_osx.py", line 431, in _sendMouseEvent
+    mouseEvent = Quartz.CGEventCreateMouseEvent(None, ev, (x, y), button)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/objc/_lazyimport.py", line 177, in __getattr__
+    value = getattr(p, name)
+            ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/objc/_lazyimport.py", line 191, in __getattr__
+    value = get_constant(name)
+            ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/objc/_lazyimport.py", line 359, in get_constant
+    funcmap.pop(name)
+KeyError: 'CGEventCreateMouseEvent'
+127.0.0.1 - - [31/Oct/2025 19:32:10] "GET /socket.io/?token=MyStrongToken123456&EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 329, in execute
+    write(b"")
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/serving.py", line 254, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
